@@ -65,7 +65,7 @@ module.exports = function (config) {
          Locally installed browsers
          Chrome, ChromeCanary, PhantomJS, Firefox, Opera, IE, Safari, iOS etc.
          */
-        browsers: ['Chrome'],
+        browsers: ['Chrome', 'ChromeWithoutSecurity'],
 
         /*
          Enable / disable watching file and executing tests whenever any file changes
@@ -111,9 +111,9 @@ module.exports = function (config) {
         urlRoot: '_karma_',
 
         customLaunchers: {
-            Chrome_travis_ci: {
+            ChromeWithoutSecurity: {
                 base: 'Chrome',
-                flags: ['--no-sandbox']
+                flags: ['--disable-web-security']
             }
         }
     });
