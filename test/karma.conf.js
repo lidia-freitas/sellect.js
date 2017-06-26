@@ -108,6 +108,13 @@ module.exports = function (config) {
         },
 
         //URL root prevent conflicts with the site root
-        urlRoot: '_karma_'
+        urlRoot: '_karma_',
+
+        customLaunchers: {
+            Chrome_travis_ci: {
+                base: 'Chrome',
+                flags: ['--no-sandbox']
+            }
+        }
     });
 };
