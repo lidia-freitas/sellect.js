@@ -145,7 +145,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 [build-url]: https://travis-ci.org/lidia-freitas/sellect.js
-[build-image]: http://img.shields.io/travis/lidia-freitas/sellect.png
+[build-image]: http://img.shields.io/travis/lidia-freitas/sellect.js.png
 
 [gpa-url]: https://codeclimate.com/github/lidia-freitas/sellect.js
 [gpa-image]: https://codeclimate.com/github/lidia-freitas/sellect.js.png
