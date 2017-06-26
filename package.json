@@ -1,15 +1,15 @@
 {
-  "name": "sellect",
-  "version": "0.1.0",
-  "description": "sellect scaffolded with generator-microjs v0.1.2.",
+  "name": "sellect.js",
+  "version": "1.0.0",
+  "description": "sellect.js scaffolded with generator-microjs v0.1.2.",
   "author": {
     "name": "Lidia Freitas",
-    "email": "",
+    "email": "lidiafreitas.me@gmail.com",
     "url": "https://github.com/lidia-freitas"
   },
-  "homepage": "https://github.com/lidia-freitas/sellect",
+  "homepage": "https://github.com/lidia-freitas/sellect.js",
   "bugs": {
-    "url": "https://github.com/lidia-freitas/sellect/issues"
+    "url": "https://github.com/lidia-freitas/sellect.js/issues"
   },
   "licenses": [
     {
@@ -27,7 +27,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/lidia-freitas/sellect.git"
+    "url": "git://github.com/lidia-freitas/sellect.js.git"
   },
   "main": "sellect.js",
   "scripts": {
@@ -36,7 +36,10 @@
   "keywords": [
     "micro",
     "framework",
-    "library"
+    "library",
+    "select",
+    "dropdown",
+    "autocomplete"
   ],
   "dependencies": {},
   "devDependencies": {
