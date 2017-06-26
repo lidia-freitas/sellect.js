@@ -5,13 +5,15 @@ node_js:
 
 before_script:
   #- npm install -g codeclimate-test-reporter
+   - "export DISPLAY=:99.0"
+   - "sh -e /etc/init.d/xvfb start"
 
 after_script:
   #TODO: enable publishing code coverage reports
   #- codeclimate < test/coverage/**/lcov.info
 
 notifications:
-  # publish build status to IRC channel: #sellect
+  # publish build status to IRC channel: #sellect.js
   irc:
     channels:
     - chat.freenode.net#sellect
@@ -22,7 +24,7 @@ notifications:
     - 'Change view : %{compare_url}'
     - 'Build details : %{build_url}'
   #TODO: enable publishing build status to gitter.im
-  # publish build status to gitter chat room: https://gitter.im/lidia-freitas/sellect
+  # publish build status to gitter chat room: https://gitter.im/lidia-freitas/sellect.js
   #webhooks:
   #  urls:
   #  - [REPLACE WITH YOUR WEBHOOK URL; https://webhooks.gitter.im/e/XXXXXXXXXXXXXXXX]
