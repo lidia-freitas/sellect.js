@@ -1,0 +1,24 @@
+{
+  "name": "sellect.js",
+  "version": "0.1.0",
+  "main": [
+    "sellect.js",
+    "sellect.css"
+  ],
+  "ignore": [
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".jshintrc",
+    ".npmignore",
+    ".travis.yml",
+    ".umd",
+    "gulpfile.js",
+    "npm-shrinkwrap.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {}
+}

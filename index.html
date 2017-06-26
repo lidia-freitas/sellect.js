@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sellect.js Demo</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="sellect.css">
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<p> > A multi-selection dropdown plugin made in vanilla javascript</p>
+<a class="github" href="https://github.com/lidia-freitas/sellect.js">/Github</a>
+
+<label for="my-element">My Sellect Element</label>
+<input type="text" id="my-element">
+
+<div id="selected-list" class="demo-list selected-list"></div>
+<div id="unselected-list"  class="demo-list unselected-list"></div>
+
+
+<script src="sellect.js"></script>
+
+<script>
+    var mySellect = sellect("#my-element", {
+        originList: ['banana', 'apple', 'pineapple', 'papaya', 'grape', 'orange', 'grapefruit', 'guava', 'watermelon', 'melon'],
+        destinationList: ['banana', 'papaya', 'grape', 'orange', 'guava'],
+        onInsert: updateDemoLists,
+        onRemove: updateDemoLists
+    });
+
+    mySellect.init();
+
+    // demo code to return lists
+    function updateDemoLists(event, item) {
+        var selectedList = document.getElementById('selected-list');
+        var unselectedList = document.getElementById('unselected-list');
+        var selectedArr;
+        var unselectedArr;
+
+        while (selectedList.firstChild) {
+            selectedList.removeChild(selectedList.firstChild);
+        }
+
+        while (unselectedList.firstChild) {
+            unselectedList.removeChild(unselectedList.firstChild);
+        }
+
+        selectedArr = mySellect.getSelected();
+        unselectedArr = mySellect.getUnselected();
+
+        selectedArr.forEach(function (item, index, arr){
+            var span = document.createElement('span');
+            span.innerText = item;
+            selectedList.appendChild(span);
+        });
+
+        unselectedArr.forEach(function (item, index, arr){
+            var span = document.createElement('span');
+            span.innerText = item;
+            unselectedList.appendChild(span);
+        });
+    }
+</script>
+</body>
+</html>
