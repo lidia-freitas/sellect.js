@@ -13,6 +13,8 @@
     ".npmignore",
     ".travis.yml",
     ".umd",
+    "bower.json",
+    "gruntfile.js",
     "gulpfile.js",
     "npm-shrinkwrap.json",
     "package.json"
