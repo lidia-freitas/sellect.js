@@ -16,8 +16,7 @@ before_script:
  - sudo dpkg -i google-chrome*.deb
 
 after_script:
-  #TODO: enable publishing code coverage reports
-  #- codeclimate < test/coverage/**/lcov.info
+
 
 notifications:
   # publish build status to IRC channel: #sellect.js
@@ -30,14 +29,7 @@ notifications:
     - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
     - 'Change view : %{compare_url}'
     - 'Build details : %{build_url}'
-  #TODO: enable publishing build status to gitter.im
-  # publish build status to gitter chat room: https://gitter.im/lidia-freitas/sellect.js
-  #webhooks:
-  #  urls:
-  #  - [REPLACE WITH YOUR WEBHOOK URL; https://webhooks.gitter.im/e/XXXXXXXXXXXXXXXX]
-  #  on_success: always
-  #  on_failure: always
-  #  on_start: false
+
 
 env:
   #- CODECLIMATE_REPO_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

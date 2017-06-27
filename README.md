@@ -154,17 +154,17 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 [coverage-image]: https://codeclimate.com/github/lidia-freitas/sellect.js/coverage.png
 
 [depstat-url]: https://david-dm.org/lidia-freitas/sellect.js
-[depstat-image]: https://david-dm.org/lidia-freitas/sellect.png?theme=shields.io
+[depstat-image]: https://david-dm.org/lidia-freitas/sellect.js.png?theme=shields.io
 
 [issues-url]: https://github.com/lidia-freitas/sellect.js/issues
-[issues-image]: http://img.shields.io/github/issues/lidia-freitas/sellect.png
+[issues-image]: http://img.shields.io/github/issues/lidia-freitas/sellect.js.png
 
 [bower-url]: http://bower.io/search/?q=sellect.js
-[bower-image]: https://badge.fury.io/bo/sellect.png
+[bower-image]: https://badge.fury.io/bo/sellect.js.png
 
 [downloads-url]: https://www.npmjs.org/package/sellect.js
-[downloads-image]: http://img.shields.io/npm/dm/sellect.png
+[downloads-image]: http://img.shields.io/npm/dm/sellect.js.png
 
 [npm-url]: https://www.npmjs.org/package/sellect.js
-[npm-image]: https://badge.fury.io/js/sellect.png
+[npm-image]: https://badge.fury.io/js/sellect.js.png
 

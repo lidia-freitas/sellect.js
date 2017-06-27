@@ -33,26 +33,14 @@
 
         if (self.options) {
             self.options.originList.forEach(function (item) {
-                var originItem = document.createElement('span');
-                var originIcon = document.createElement('i');
-                originItem.classList.add('sellect-trigger', 'sellect-item');
-                originIcon.classList.add('fa', 'fa-times', 'sellect-close-icon');
-
-                originItem.innerHTML = item;
-                originItem.appendChild(originIcon);
-                self.originListHTML.appendChild(originItem);
+                createListsHTML(self.originListHTML, item);
             });
 
             self.options.destinationList.forEach(function (item) {
-                var destinationItem = document.createElement('span');
-                var destinationIcon = document.createElement('i');
-                destinationItem.classList.add('sellect-trigger', 'sellect-item');
-                destinationIcon.classList.add('fa', 'fa-times', 'sellect-close-icon');
-
-                destinationItem.innerText = item;
-                destinationItem.appendChild(destinationIcon);
-                self.destinationListHTML.appendChild(destinationItem);
+                createListsHTML(self.destinationListHTML, item);
             });
+
+
 
             document.body.insertBefore(self.container, self.options.element);
 
@@ -61,6 +49,17 @@
             self.container.appendChild(self.originListHTML);
             self.container.appendChild(self.arrow);
         }
+    }
+
+    function createListsHTML(list, item) {
+        var listItem = document.createElement('span');
+        var listIcon = document.createElement('i');
+        listItem.classList.add('sellect-trigger', 'sellect-item');
+        listIcon.classList.add('fa', 'fa-times', 'sellect-close-icon');
+
+        listItem.innerHTML = item;
+        listItem.appendChild(listIcon);
+        list.appendChild(listItem);
     }
 
     function initializeEvents () {

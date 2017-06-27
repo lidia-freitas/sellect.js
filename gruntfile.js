@@ -16,7 +16,9 @@ module.exports = function (grunt) {
         dist: '.'
     };
 
+    /* eslint-disable global-require */
     require('jit-grunt')(grunt);
+    /* eslint-enable global-require */
 
     grunt.initConfig({
         config: config,
