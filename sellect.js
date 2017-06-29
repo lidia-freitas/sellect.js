@@ -18,7 +18,7 @@
         this.arrow = document.createElement('i');
 
         var defaults = {
-            element: document.querySelector(selector),
+            element: typeof(selector) === 'object' ? selector : document.querySelector(selector),
             originList: [],
             destinationList: []
         };
@@ -40,9 +40,7 @@
                 createListsHTML(self.destinationListHTML, item);
             });
 
-
-
-            document.body.insertBefore(self.container, self.options.element);
+            self.options.element.parentNode.insertBefore(self.container, self.options.element);
 
             self.container.appendChild(self.destinationListHTML);
             self.container.appendChild(self.options.element);
