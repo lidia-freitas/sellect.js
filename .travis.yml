@@ -15,8 +15,6 @@ before_script:
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
 
-after_script:
-
 
 notifications:
   # publish build status to IRC channel: #sellect.js
@@ -30,10 +28,19 @@ notifications:
     - 'Change view : %{compare_url}'
     - 'Build details : %{build_url}'
 
+addons:
+  code_climate:
+    repo_token:
+      secure: "fex7aSQ9xYjZ/rV/fqnsP/FLj+vRX7MFT9MTMprXu12AEV+0jVcAkaH1MnF7bNyJdDISTfZaPgbAnSdiAC8nCMo8KtU86Ci1/8peHtLZKvrWkhBfOvVgJOabFm63WUqROJwFxAzcAARiW1zoVYMiI9l0E4O+jo0AknWAb1nXaM2PHaioia9HusL+R4K8AmBOt3wH0TS3D7CA6YXe
+              shprjUWB44645nryZVm2k/HDKsXY+z6IHlYq4LuLGp3lfpInkTLrd8wFE6KaRb5gt2qKlkHbClkhOHhc2L2FDAFzsLUVeNkhHL1pKvtwNJF8BMO+3sbjF5DbJqcy2DsZxXaiCDzbdDQ0sSQ2eljqt9HleNACgi+KmMjp21BycwPssIux0NMTAHpagILJQgAbO90c4zPBQgrqSAr8wKOXaIVvo6L
+              iLX1UKuabacrk4EpTIcp8zWzQigxkhTjUBo6qWh2QH2WHA9qHbR47pmYDu5erDMC2mk9S0q9SWA+IxESpBfs+/D8YSXAzD0ADXOrizlnTzQz1Khk7nbTfzgtRuNsIeyUXJmGtwZDC6oVbBl3f4vvIz2+zmQmrPCA1tJXSWfCVH10ERZv9cSqIp4AJn0w6Q74EM6XBqO/X8hOO0e8UxXGZk2/tOl
+              bahzoWSCBUzvjt8lEz826AwR7meihqKdAOATY="
 
 env:
-  - CODECLIMATE_REPO_TOKEN=d7a886cafdddd7b269ea5d37412a62d8f691059f1560307b3e6bc777e8e78662
+#  - CODECLIMATE_REPO_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
   if(process.env.TRAVIS) {
     configuration.browsers = ['Chrome_travis_ci'];
   }
+
+
