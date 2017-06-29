@@ -32,7 +32,8 @@ notifications:
 
 
 env:
-  #- CODECLIMATE_REPO_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  - CODECLIMATE_REPO_TOKEN=d7a886cafdddd7b269ea5d37412a62d8f691059f1560307b3e6bc777e8e78662
+
   if(process.env.TRAVIS) {
     configuration.browsers = ['Chrome_travis_ci'];
   }
