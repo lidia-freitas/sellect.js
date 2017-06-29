@@ -7,12 +7,11 @@
 [![NPM version][npm-image]][npm-url]
 
 ## About
-
 A multi-selection dropdown plugin made in vanilla javascript
-
 
 ## Install Choices
 - `bower install --save sellect.js`
+- `npm install --save sellect.js`
 - [download the zip](https://github.com/lidia-freitas/sellect.js/archive/master.zip)
 
 ## Examples
@@ -28,6 +27,10 @@ First of all, load the stylesheets and script files in your application...
     <link rel="stylesheet" href="dist/sellect.min.css">
   
     <script src="dist/sellect.min.js"></script>
+```
+...create your markup...
+```html
+<input type="text" id="my-element">
 ```
 
 ...then initialize the plugin

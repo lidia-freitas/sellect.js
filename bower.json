@@ -2,8 +2,8 @@
   "name": "sellect.js",
   "version": "1.0.0",
   "main": [
-    "sellect.js",
-    "sellect.css"
+    "src/sellect.js",
+    "src/sellect.css"
   ],
   "ignore": [
     ".editorconfig",
@@ -22,5 +22,6 @@
   "dependencies": {
     "font-awesome": "^4.7.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  }
 }

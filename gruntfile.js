@@ -6,14 +6,14 @@
  *
  * Scaffolded with generator-microjs v0.1.2
  *
- * @author Lidia Freitas <>
+ * @author Lidia Freitas <lidiafreitas.me@gmail.com>
  */
 'use strict';
 
 module.exports = function (grunt) {
     var config = {
-        app: '.',
-        dist: '.'
+        app: './src',
+        dist: './dist'
     };
 
     /* eslint-disable global-require */
@@ -38,12 +38,12 @@ module.exports = function (grunt) {
             }
         },
         clean: [
-            'dist/'
+            '<%= config.dist %>/'
         ],
         uglify: {
             default: {
                 files: {
-                    'dist/sellect.min.js': ['sellect.js']
+                    '<%= config.dist %>/sellect.min.js': ['<%= config.app %>/sellect.js']
                 }
             }
         },
@@ -54,13 +54,20 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    'dist/sellect.min.css': ['sellect.css']
+                    '<%= config.dist %>/sellect.min.css': ['<%= config.app %>/sellect.css']
                 }
+            }
+        },
+        copy: {
+            main: {
+                expand: true,
+                flatten: true,
+                filter: 'isFile',
+                src: '<%= config.app %>/*',
+                dest: '<%= config.dist %>/'
             }
         }
     });
-
-
 
     grunt.registerTask('test', [
         'karma:unit'
@@ -68,7 +75,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'uglify',
-        'cssmin'
+        'cssmin',
+        'copy'
     ]);
 
     grunt.registerTask('default', [

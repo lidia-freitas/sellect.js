@@ -41,18 +41,18 @@
     "dropdown",
     "autocomplete"
   ],
-  "dependencies": {
-  },
-    "devDependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "grunt": "*",
-    "jit-grunt": "^0.10.0",
     "grunt-complexity": "*",
     "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^2.2.0",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-uglify": "^3.0.1",
     "grunt-karma": "*",
     "jasmine-core": "^2.5.2",
+    "jit-grunt": "^0.10.0",
     "karma": "*",
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "*",

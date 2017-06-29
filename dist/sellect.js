@@ -1,7 +1,7 @@
 /**
- * @file sellect is micro-library.
+ * @file sellect.js is micro-library.
  * Scaffolded with generator-microjs
- * @author Lidia Freitas <lydiaoliveira@gmail.com>
+ * @author Lidia Freitas <lidiafreitas.me@gmail.com>
  */
 
 (function () {

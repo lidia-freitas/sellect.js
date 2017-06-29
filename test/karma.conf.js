@@ -19,8 +19,8 @@ module.exports = function (config) {
         basePath: '../',
 
         files: [
-            'sellect.css',
-            'sellect.js',
+            'src/sellect.css',
+            'src/sellect.js',
             'test/spec/**/*.js'
         ],
 
