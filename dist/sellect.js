@@ -65,10 +65,14 @@
 
         if (self.options) {
             self.originListHTML.addEventListener('click', function () {
+                if (event.target.tagName === 'DIV')
+                    return false;
                 swapItemDOM.call(self, event.target, self.destinationListHTML);
             }, false);
 
             self.destinationListHTML.addEventListener('click', function () {
+                if (event.target.tagName === 'DIV')
+                    return false;
                 swapItemDOM.call(self, event.target, self.originListHTML);
             }, false);
 
@@ -365,5 +369,31 @@
         }
 
         return self.options.originList;
+    };
+
+    _Sellect.prototype.updateLists = function (origin, destination) {
+        var self = this;
+
+        self.originListHTML.innerHTML = '';
+        self.destinationListHTML.innerHTML = '';
+
+        if (self.options) {
+            self.options.originList = origin;
+            self.options.destinationList = destination;
+
+            self.options.originList.forEach(function (item) {
+                createListsHTML(self.originListHTML, item);
+            });
+
+            self.options.destinationList.forEach(function (item) {
+                createListsHTML(self.destinationListHTML, item);
+            });
+
+            self.container.innerHTML = '';
+            self.container.appendChild(self.destinationListHTML);
+            self.container.appendChild(self.options.element);
+            self.container.appendChild(self.originListHTML);
+            self.container.appendChild(self.arrow);
+        }
     };
 })();
