@@ -65,13 +65,13 @@
 
         if (self.options) {
             self.originListHTML.addEventListener('click', function () {
-                if (event.target.tagName == 'DIV')
+                if (event.target.tagName === 'DIV')
                     return false;
                 swapItemDOM.call(self, event.target, self.destinationListHTML);
             }, false);
 
             self.destinationListHTML.addEventListener('click', function () {
-                if (event.target.tagName == 'DIV')
+                if (event.target.tagName === 'DIV')
                     return false;
                 swapItemDOM.call(self, event.target, self.originListHTML);
             }, false);
@@ -374,8 +374,8 @@
     _Sellect.prototype.updateLists = function (origin, destination) {
         var self = this;
 
-        self.originListHTML.innerHTML = "";
-        self.destinationListHTML.innerHTML = "";
+        self.originListHTML.innerHTML = '';
+        self.destinationListHTML.innerHTML = '';
 
         if (self.options) {
             self.options.originList = origin;
