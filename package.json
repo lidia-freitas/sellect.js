@@ -43,7 +43,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "grunt": "*",
+    "grunt": "^1.0.2",
     "grunt-complexity": "*",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
