@@ -65,14 +65,12 @@
 
         if (self.options) {
             self.originListHTML.addEventListener('click', function () {
-                if (event.target.tagName === 'DIV')
-                    return false;
+                if (event.target.tagName === 'DIV') return false;
                 swapItemDOM.call(self, event.target, self.destinationListHTML);
             }, false);
 
             self.destinationListHTML.addEventListener('click', function () {
-                if (event.target.tagName === 'DIV')
-                    return false;
+                if (event.target.tagName === 'DIV') return false;
                 swapItemDOM.call(self, event.target, self.originListHTML);
             }, false);
 
@@ -163,11 +161,11 @@
 
     function filterOriginList() {
         var self = this;
-        var string = event.target.value;
+        var string = event.target.value.toLowerCase();
         var items = self.originListHTML.childNodes;
 
         items.forEach(function (item) {
-            if (item.innerText.indexOf(string) !== -1) {
+            if (item.innerText.toLowerCase().indexOf(string) !== -1) {
                 item.style.display = 'inherit';
             }
             else {
